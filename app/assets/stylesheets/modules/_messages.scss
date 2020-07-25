@@ -16,6 +16,23 @@
   .SideBar__user {
     background-color: #253141;
     height: 100px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    .TopItems {
+      width: 100%;
+      height: 20px;
+      background-color: #d8d8d8;
+      display: flex;
+      justify-content: space-between;
+      .TopItems__name {
+        background-color: gray;
+      }
+      .TopItems__icons {
+        width: 60px;
+        background-color: gray;
+      }
+    }
   }
   .SideBar__grouplist {
     background-color: #2f3e51;
