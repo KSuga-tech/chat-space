@@ -12,11 +12,12 @@
   height: 100%;
   width: 300px;
   background-color: #253141;
+  padding: 0 20px;
   
   &__user {
     background-color: #253141;
     height: 100px;
-    padding: 0 20px;
+
     display: flex;
     align-items: center;
     .TopItems {
@@ -26,6 +27,8 @@
       justify-content: space-between;
       &__name {
         color: #ffffff;
+        font-weight: bold;
+        font-size: 16px;
       }
       &__icons {
         width: 60px;
@@ -41,9 +44,20 @@
       }
     }
   }
-  &__grouplist {
+  &__group_list {
     background-color: #2f3e51;
     height: calc( 100% - 100px );
+    .GroupBlock {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 15px;
+      &__name {
+        font-size: 15px;
+      }
+      &__message {
+       font-size: 11px;
+      }
+    }
   }
 }
 
