@@ -79,7 +79,9 @@
       justify-content: space-between;
       text-align: center;
       .group {
-
+        margin-top: 35px;
+        color: #333333;
+        font-size: 20px;
       }
       .edit {
         width: 72px;
@@ -92,8 +94,9 @@
       }
     }
     &--member {
-
-
+      margin-top: 15px;
+      color: #999999;
+      font-size: 12px;
     }
   }
   .MainChat__message {
