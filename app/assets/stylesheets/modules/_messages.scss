@@ -13,7 +13,7 @@
   width: 300px;
   background-color: #253141;
   
-  .SideBar__user {
+  &__user {
     background-color: #253141;
     height: 100px;
     padding: 0 20px;
@@ -22,19 +22,26 @@
     .TopItems {
       width: 100%;
       height: 20px;
-      background-color: #d8d8d8;
       display: flex;
       justify-content: space-between;
-      .TopItems__name {
-        background-color: gray;
+      &__name {
+        color: #ffffff;
       }
-      .TopItems__icons {
+      &__icons {
         width: 60px;
-        background-color: gray;
+        display: flex;
+        justify-content: flex-end;
+        a {
+          color: #ffffff;
+        }
+
+        &--icon {
+          margin-right: 5px;
+        }
       }
     }
   }
-  .SideBar__grouplist {
+  &__grouplist {
     background-color: #2f3e51;
     height: calc( 100% - 100px );
   }
