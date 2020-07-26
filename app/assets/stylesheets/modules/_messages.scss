@@ -12,12 +12,12 @@
   height: 100%;
   width: 300px;
   background-color: #253141;
-  padding: 0 20px;
+
   
   &__user {
     background-color: #253141;
     height: 100px;
-
+    padding: 0 20px;
     display: flex;
     align-items: center;
     .TopItems {
@@ -47,12 +47,14 @@
   &__group_list {
     background-color: #2f3e51;
     height: calc( 100% - 100px );
+    padding: 0 20px;
     .GroupBlock {
       color: #ffffff;
       font-weight: bold;
-      font-size: 15px;
+      padding: 20px 0 40px 0;
       &__name {
         font-size: 15px;
+        margin-bottom: 5px;
       }
       &__message {
        font-size: 11px;
@@ -70,6 +72,29 @@
     height: 100px;
     background-color: #ffffff;
     border-bottom: 1px solid #eeeeee;
+    padding: 0 40px;
+
+    &--overview {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      .group {
+
+      }
+      .edit {
+        width: 72px;
+        height: 40px;
+        margin-top: 28px;
+        font-size: 16px;
+        color: #38aef0;
+        padding: 6px 20px;
+        border: solid 1px #38aef0;
+      }
+    }
+    &--member {
+
+
+    }
   }
   .MainChat__message {
     width: 100%;
