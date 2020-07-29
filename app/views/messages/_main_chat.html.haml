@@ -44,12 +44,10 @@
       message and picture
 
 .MainChat__form 
-  .FormBox
+  %form.FormBox
     .FormBox__inputContent
-      form
-    .FormBox__inputImage
-      image
-    .FormBox__inputIcon
-      = link_to icon('far', 'image')
-    .FormBox__sendBtn
-      send
+      %input.textForm{"placeholder": "type a message", "type": "text"}
+      %label.FormBox__inputImage
+        = link_to icon('far', 'image')
+        %input.Hidden{type: "file"}
+    %input.FormBox__sendBtn{"type": "submit", "value": "Send"}

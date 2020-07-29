@@ -126,5 +126,37 @@
     width: 100%;
     height: 90px;
     background-color: #d2d2d2;
+    .FormBox {
+      padding: 20px 40px;
+      display: flex;
+
+      &__inputContent {
+        height: 50px;
+        width: 100%;
+        padding-left: 10px;
+        display: flex;
+        position: relative;
+        .textForm {
+          width: 100%;
+        }
+        .FormBox__inputImage {
+          position: absolute;
+          right: 10px;
+          line-height: 50px;
+        }
+        .Hidden {
+          display: none;
+        }
+      }
+
+      &__sendBtn {
+        margin-left: 15px;
+        padding: 0 30px;
+        background-color: #38aef0;
+        color: #ffffff;
+        font-size: 16px;
+        border: none;
+      }
+    }
   }
 }
