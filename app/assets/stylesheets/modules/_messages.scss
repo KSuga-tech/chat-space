@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-@mixin miniSpace {
-  margin-right: 5px;
-}
-
 .wrapper {
   width: 100vw;
   height: 100vh;
@@ -15,7 +11,7 @@
 .SideBar {
   height: 100%;
   width: 300px;
-  background-color: #253141;
+  background-color: $color_darkblue;
 }
 
 .User {
@@ -29,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     &__name {
-      color: #ffffff;
+      color: $color_white;
       font-weight: bold;
       font-size: 16px;
     }
@@ -38,7 +34,7 @@
       display: flex;
       justify-content: flex-end;
       a {
-        color: #ffffff;
+        color: $color_white;
       }
       &--icon {
         @include miniSpace;
@@ -48,11 +44,11 @@
 }
 
 .Group {
-  background-color: #2f3e51;
+  background-color: $color_aegean;
   height: calc( 100% - 100px );
   padding: 0 20px;
   .GroupBox {
-    color: #ffffff;
+    color: $color_white;
     font-weight: bold;
     padding: 20px 0 40px 0;
     &__name {
@@ -68,14 +64,14 @@
 .MainChat {
   height: 100%;
   width: calc( 100vw - 300px );
-  background-color: #ffffff;
+  background-color: $color_white;
 }
 
 .GroupInfo {
   width: 100%;
   height: 100px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #eeeeee;
+  background-color: $color_white;
+  border-bottom: 1px solid $color_whitesmoke;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
@@ -88,7 +84,7 @@
 
 .GroupName {
   margin-top: 35px;
-  color: #333333;
+  color: $color_black;
   font-size: 20px;
 }
 
@@ -98,16 +94,16 @@
   line-height: 40px;
   margin-top: 28px;
   font-size: 16px;
-  color: #38aef0;
+  color: $color_skyblue;
   padding: 0 20px;
-  border: solid 1px #38aef0;
+  border: solid 1px $color_skyblue;
 }
 
 .MemberList {
   margin-top: 15px;
   display: flex;
   &__member {
-    color: #999999;
+    color: $color_gray;
     font-size: 12px;
     @include miniSpace;
     display: flex;
@@ -120,7 +116,7 @@
 .MessageList {
   width: 100%;
   height: calc( 100% - 100px - 90px );
-  background-color: #fafafa;
+  background-color: $color_lightgray;
 }
 
 .MessageBox {
@@ -132,25 +128,25 @@
   display: flex;
   margin-bottom: 12px;
   &__name {
-    color: #333333;
+    color: $color_black;
     font-size: 16px;
     @include miniSpace;
   }
   &__daytime {
-    color: #999999;
+    color: $color_gray;
     font-size: 12px;
   }
 }
 
 .Objects {
-  color: #434A54;
+  color: $color_heavyblue;
   font-size: 14px;
 }
 
 .MessageForm {
   width: 100%;
   height: 90px;
-  background-color: #d2d2d2;
+  background-color: $color_offwhite;
 }
 
 .FormBox {
@@ -175,7 +171,7 @@
     font-size: 25px;
   
     a {
-      color: #333333;
+      color: $color_black;
     }
   }
   &__hidden {
@@ -186,8 +182,8 @@
 .SendBtn {
   margin-left: 15px;
   padding: 0 30px;
-  background-color: #38aef0;
-  color: #ffffff;
+  background-color: $color_skyblue;
+  color: $color_white;
   font-size: 16px;
   border: none;
 }
