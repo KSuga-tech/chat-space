@@ -1,19 +1,19 @@
-.MainChat__upper 
+.GroupInfo
   .OverView
-    .OverView__group
+    .GroupName
       group名
-    .OverView__edit
-      edit
-  .OverView__member
-    member
-.MainChat__message 
+    .EditBtn
+      Edit
+  .MemberList
+    member: goma mugi kei
+.MessageList 
   .MessageBox
     .Property
       .Property__name
         techcamp
       .Property__daytime
         2020/07/28(Tue.) 22:14:00
-    .Property__object
+    .Objects
       message and picture
 
   .MessageBox
@@ -22,7 +22,7 @@
         techcamp
       .Property__daytime
         2020/07/28(Tue.) 22:14:00
-    .Property__object
+    .Objects
       message and picture
 
   .MessageBox
@@ -31,7 +31,7 @@
         techcamp
       .Property__daytime
         2020/07/28(Tue.) 22:14:00
-    .Property__object
+    .Objects
       message and picture
 
   .MessageBox
@@ -40,14 +40,14 @@
         techcamp
       .Property__daytime
         2020/07/28(Tue.) 22:14:00
-    .Property__object
+    .Objects
       message and picture
 
-.MainChat__form 
+.MessageForm
   %form.FormBox
-    .FormBox__inputContent
-      %input.textForm{"placeholder": "type a message", "type": "text"}
-      %label.FormBox__inputImage
-        = link_to icon('far', 'image')
-        %input.Hidden{type: "file"}
-    %input.FormBox__sendBtn{"type": "submit", "value": "Send"}
+    .InputContent
+      %input.InputContent__text{"placeholder": "type a message", "type": "text"}
+      %label.InputContent__image
+        = icon('far', 'image')
+        %input.InputContent__hidden{type: "file"}
+    %input.SendBtn{"type": "submit", "value": "Send"}
