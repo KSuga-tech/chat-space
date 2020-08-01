@@ -1,0 +1,60 @@
+.GroupInfo
+  .OverView
+    .GroupName
+      group名
+    .MemberList
+    %ul.MemberList__member
+      member : 
+      %li.MemberList__name
+        goma
+      %li.MemberList__name
+        mugi
+  .EditBtn
+    Edit
+
+
+.MessageList 
+  .MessageBox
+    .Property
+      .Property__name
+        techcamp
+      .Property__daytime
+        2020/07/28(Tue.) 22:14:00
+    .Objects
+      message and picture
+
+  .MessageBox
+    .Property
+      .Property__name
+        techcamp
+      .Property__daytime
+        2020/07/28(Tue.) 22:14:00
+    .Objects
+      message and picture
+
+  .MessageBox
+    .Property
+      .Property__name
+        techcamp
+      .Property__daytime
+        2020/07/28(Tue.) 22:14:00
+    .Objects
+      message and picture
+
+  .MessageBox
+    .Property
+      .Property__name
+        techcamp
+      .Property__daytime
+        2020/07/28(Tue.) 22:14:00
+    .Objects
+      message and picture
+
+.MessageForm
+  %form.FormBox
+    .InputContent
+      %input.InputContent__text{"placeholder": "type a message", "type": "text"}
+      %label.InputContent__image
+        = icon('far', 'image')
+        %input.InputContent__hidden{type: "file"}
+    %input.SendBtn{"type": "submit", "value": "Send"}

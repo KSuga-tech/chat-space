@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.SideBar {
+  height: 100%;
+  width: 300px;
+  background-color: $color_darkblue;
+}
+
+.User {
+  height: 100px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  .TopItems {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    &__name {
+      color: $color_white;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    &__icons {
+      width: 60px;
+      display: flex;
+      justify-content: flex-end;
+      a {
+        color: $color_white;
+      }
+      &--icon {
+        @include miniSpace;
+      }
+    }
+  }
+}
+
+.Group {
+  background-color: $color_aegean;
+  height: calc( 100% - 100px );
+  padding: 0 20px;
+  .GroupBox {
+    color: $color_white;
+    font-weight: bold;
+    padding: 20px 0 40px 0;
+    &__name {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+    &__message {
+      font-size: 11px;
+    }
+  }
+}
+
+.MainChat {
+  height: 100%;
+  width: calc( 100vw - 300px );
+  background-color: $color_white;
+}
+
+.GroupInfo {
+  width: 100%;
+  height: 100px;
+  background-color: $color_white;
+  border-bottom: 1px solid $color_whitesmoke;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.OverView {
+  text-align: left;
+}
+
+.GroupName {
+  margin-top: 35px;
+  color: $color_black;
+  font-size: 20px;
+}
+
+.EditBtn {
+  width: 72px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 28px;
+  font-size: 16px;
+  color: $color_skyblue;
+  padding: 0 20px;
+  border: solid 1px $color_skyblue;
+}
+
+.MemberList {
+  margin-top: 15px;
+  display: flex;
+  &__member {
+    color: $color_gray;
+    font-size: 12px;
+    @include miniSpace;
+    display: flex;
+  }
+  &__name {
+    @include miniSpace;
+  }
+}
+
+.MessageList {
+  width: 100%;
+  height: calc( 100% - 100px - 90px );
+  background-color: $color_lightgray;
+}
+
+.MessageBox {
+  margin-left: 40px;
+  padding: 35px 0 46px 0;
+}
+
+.Property {
+  display: flex;
+  margin-bottom: 12px;
+  &__name {
+    color: $color_black;
+    font-size: 16px;
+    @include miniSpace;
+  }
+  &__daytime {
+    color: $color_gray;
+    font-size: 12px;
+  }
+}
+
+.Objects {
+  color: $color_heavyblue;
+  font-size: 14px;
+}
+
+.MessageForm {
+  width: 100%;
+  height: 90px;
+  background-color: $color_offwhite;
+}
+
+.FormBox {
+  padding: 20px 40px;
+  display: flex;
+}
+
+.InputContent {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  &__text {
+    width: 100%;
+    padding-left: 10px;
+    border: none;
+  }
+  &__image {
+    position: absolute;
+    right: 10px;
+    line-height: 50px;
+    font-size: 25px;
+  
+    a {
+      color: $color_black;
+    }
+  }
+  &__hidden {
+    display: none;
+  }
+}
+
+.SendBtn {
+  margin-left: 15px;
+  padding: 0 30px;
+  background-color: $color_skyblue;
+  color: $color_white;
+  font-size: 16px;
+  border: none;
+}
