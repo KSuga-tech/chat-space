@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+@mixin miniSpace {
+  margin-right: 5px;
+}
+
 .wrapper {
   width: 100vw;
   height: 100vh;
@@ -37,7 +41,7 @@
         color: #ffffff;
       }
       &--icon {
-        margin-right: 5px;
+        @include miniSpace;
       }
     }
   }
@@ -105,11 +109,11 @@
   &__member {
     color: #999999;
     font-size: 12px;
-    margin-right: 5px;
+    @include miniSpace;
     display: flex;
   }
   &__name {
-    margin-right: 5px;
+    @include miniSpace;
   }
 }
 
@@ -130,7 +134,7 @@
   &__name {
     color: #333333;
     font-size: 16px;
-    margin-right: 5px;
+    @include miniSpace;
   }
   &__daytime {
     color: #999999;
@@ -142,8 +146,6 @@
   color: #434A54;
   font-size: 14px;
 }
-
-
 
 .MessageForm {
   width: 100%;
@@ -159,12 +161,11 @@
 .InputContent {
   height: 50px;
   width: 100%;
-  padding-left: 10px;
   display: flex;
   position: relative;
   &__text {
     width: 100%;
-    padding: 10px;
+    padding-left: 10px;
     border: none;
   }
   &__image {
