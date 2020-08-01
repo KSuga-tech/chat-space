@@ -152,14 +152,16 @@ background-color: #fafafa;
   padding-left: 10px;
   display: flex;
   position: relative;
-  &__TextForm {
+  &__text {
     width: 100%;
     padding: 10px;
+    border: none;
   }
   &__image {
     position: absolute;
     right: 10px;
     line-height: 50px;
+    font-size: 25px;
   
     a {
       color: #333333;
