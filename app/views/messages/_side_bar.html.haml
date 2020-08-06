@@ -8,26 +8,14 @@
       = link_to edit_user_path(current_user) do
         =icon('fas', 'cog')
 .Group
-  .GroupBox
-    .GroupBox__name
-      techcamp
-    .GroupBox__message
-      まだメッセージがありません
-  .GroupBox
-    .GroupBox__name
-      techcamp
-    .GroupBox__message
-      まだメッセージがありません
-  .GroupBox
-    .GroupBox__name
-      techcamp
-    .GroupBox__message
-      まだメッセージがありません
-  .GroupBox
-    .GroupBox__name
-      techcamp
-    .GroupBox__message
-      まだメッセージがありません
+  - current_user.groups.each do |group|
+    .GroupBox
+      = link_to '#' do
+        .GroupBox__name
+          = group.name
+        .GroupBox__message
+          まだメッセージがありません
+
 
 
 
