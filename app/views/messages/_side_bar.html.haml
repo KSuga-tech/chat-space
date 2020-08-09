@@ -10,11 +10,11 @@
 .Group
   - current_user.groups.each do |group|
     .GroupBox
-      = link_to '#' do
+      = link_to group_messages_path(group) do
         .GroupBox__name
           = group.name
-        .GroupBox__message
-          まだメッセージがありません
+        .GroupBox__message 
+          = group.show_last_message
 
 
 

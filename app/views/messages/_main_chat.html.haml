@@ -1,60 +1,24 @@
 .GroupInfo
   .OverView
     .GroupName
-      group名
+      = @group.name
     .MemberList
     %ul.MemberList__member
       member : 
-      %li.MemberList__name
-        goma
-      %li.MemberList__name
-        mugi
-  .EditBtn
+      - @group.users.each do |group|
+        %li.MemberList__name
+          = group.name
+  = link_to edit_group_path(current_user), class: 'EditBtn' do
     Edit
 
-
 .MessageList 
-  .MessageBox
-    .Property
-      .Property__name
-        techcamp
-      .Property__daytime
-        2020/07/28(Tue.) 22:14:00
-    .Objects
-      message and picture
-
-  .MessageBox
-    .Property
-      .Property__name
-        techcamp
-      .Property__daytime
-        2020/07/28(Tue.) 22:14:00
-    .Objects
-      message and picture
-
-  .MessageBox
-    .Property
-      .Property__name
-        techcamp
-      .Property__daytime
-        2020/07/28(Tue.) 22:14:00
-    .Objects
-      message and picture
-
-  .MessageBox
-    .Property
-      .Property__name
-        techcamp
-      .Property__daytime
-        2020/07/28(Tue.) 22:14:00
-    .Objects
-      message and picture
+  = render @messages
 
 .MessageForm
-  %form.FormBox
+  = form_with model: [@group, @message], html: {class: "FormBox"}, local: true do |f|
     .InputContent
-      %input.InputContent__text{"placeholder": "type a message", "type": "text"}
-      %label.InputContent__image
+      = f.text_field :body, class: 'InputContent__text', placeholder: "type a message"
+      = f.label :image, class: 'InputContent__image' do
         = icon('far', 'image')
-        %input.InputContent__hidden{type: "file"}
-    %input.SendBtn{"type": "submit", "value": "Send"}
+        = f.file_field :image, class: 'InputContent__hidden'
+    = f.submit "Send", class: 'SendBtn'
