@@ -1,3 +1,6 @@
 $(function() {
-  console.log("jQueryを導入しました");
+  $('.FormBox').on('submit', function(e) {
+    e.preventDefault()
+    console.log("hoge")
+  });
 });
